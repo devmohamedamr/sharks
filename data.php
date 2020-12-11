@@ -123,7 +123,8 @@
 // for($y = 1;$y<=8;$y++){
 //     echo "<tr>";
 //     for($x=1;$x<=8;$x++){
-//         echo "<td>".$x."</td>";
+//         $total = $x +$y;
+//         echo "<td>".$total."</td>";
 //     }
 //     echo "</tr>";
 // }
@@ -155,6 +156,172 @@
 //     }
 // </style>";
 // echo "<h1 class='s'>ahmed</h1>";
+
+
+// for($i=0;$i<10;$i++){
+   
+//     if($i == 4){
+//         continue;
+//     }
+//     echo $i . "<br>";
+// }
+
+// indexed
+// $names = array("mohamed","ahmed");
+// $names = ["mohamed","ahmed",32.23,true,"ww","www"];
+// $c = count($names);
+// // echo count($names);
+// for($i=0;$i<$c;$i++){
+//     echo $names[$i] . "<br>";
+// }
+
+
+
+
+// $person = ["name"=>"mohamed","age"=> 20];
+
+// $person = [
+// "ahmed",
+//  20
+// ];
+
+// for($i=0;$i<2;$i++){
+//     echo $person[$i] . "<br>";
+// }
+
+// foreach($person as $www => $mmm):
+//     echo $www." : ".$mmm."<br>";
+// endforeach;
+
+// print_r($person);
+
+
+$person = [
+    ["name" => "ahmed",
+    "age"  =>     20]
+    ,
+    ["name" => "mahmoud",
+    "age" => 90]
+];
+
+// foreach($person as $value){
+
+//     foreach($value as $k => $v){
+//         echo $k." : ".$v."<br>";
+//     }
+//     echo "<hr>";
+// }   
+
+
+
+// for($i=0;$i<=1;$i++){
+    
+//     foreach($person[$i] as $k => $v){
+//         echo $k." : ".$v."<br>";
+//     }
+//     echo "<hr>";
+// }
+
+
+
+// $list = ["mohamed","ahmed","radwa","eslam"];
+
+// echo "<ol>";
+// foreach($list as $value){
+//     // echo  $value . "<br>";
+//     echo "<li>".$value."</li>";
+// }
+
+// echo "</ol>";
+
+
+
+
+
+
+
+// function welcome($name,$x){
+//     echo "welcome ya $name";
+// }
+
+// welcome("eslam","sdsad");
+
+
+
+
+
+
+// function add($x,$y){
+//     echo $x + $y;
+// }
+// add($_POST['x'],$_POST['y']);
+
+
+
+// function number($x){
+    
+//     echo $x;
+//     return $x;
+// }
+
+
+
+
+// echo  number(20) + 30;
+// number(20);
+
+
+
+
+
+
+function ismohamed($name){
+    if($name == "mohamed"){
+        echo true;
+    }else{
+        echo false;
+    }
+}
+
+
+
+
+// $name = "mohamed";
+
+// if( ismohamed($name)){
+//     echo "success";
+// }else{
+//     echo "error";
+// }
+
+
+// ismohamed($name);
+
+
+
+// $num = [20,30,10,5,6,8];
+
+// echo max($num);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
