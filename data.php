@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+
+if(!isset($_SESSION['user'])){
+    header("LOCATION: index.html");
+}
+
 //  username from database
 // $username = "ahmed";
 // if($username == "ahmed")
@@ -303,6 +310,19 @@ function ismohamed($name){
 
 // echo max($num);
 
+// function getmin($array){
+
+//     $max = $array[0];
+//     // $count = count($array);
+//     foreach($array as $v){
+//         if($max > $v){
+//             $max = $v;
+//         }
+//     }
+//     return $max;
+// }
+
+// echo getmin($num);
 
 
 
@@ -317,6 +337,112 @@ function ismohamed($name){
 
 
 
+
+
+// function getmin($array){
+//     if(is_array($array)){
+//         $min = $array[0];
+//         foreach($array as $value){
+//             if($value < $min){
+//                 $min = $value;
+//             }
+//         }
+//         return $min;
+//     }else{
+//         return false;
+//     }
+// }
+
+// $numbers = [20,3,6,1,19,50];
+// $numbers = "asdsadas";
+
+// function getmax($array){
+//     if(is_array($array)){
+//         $max = $array[0];
+//         foreach($array as $value){
+//             if($max < $value){
+//                 $max = $value;
+//             }
+//         }
+//         return $max;
+//     }else{
+//         echo "var is not array";
+//     }
+// }
+// echo getmin($numbers);
+// echo getmax($numbers);
+
+
+
+
+
+// var_dump($_POST);
+// if(isset($_POST['username'])){
+//     echo $_POST['username'];
+// }
+
+
+
+
+
+
+
+
+// require "val.php";
+
+// if( isset($_POST['username']) || isset($_POST['password']) ){
+
+//     validation($_POST['username'],$_POST['password']);
+// }
+
+    // if(isset($_REQUEST['username'])){
+    //     echo $_REQUEST['username'];
+    // }
+
+
+
+
+
+
+
+        // var_dump($_SESSION);
+
+        // $_SESSION['name'] = "ahmed";
+
+
+        // echo $_SESSION['name'];
+
+
+
+        // print_r($_FILES);
+
+
+
+
+
+
+        if(isset($_POST['username'])){
+            echo "<pre>";
+            print_r($_FILES);
+            // $tmp = $_FILES['img']['tmp_name'];
+            // $file_name = $_FILES['img']['name'];
+            // move_uploaded_file($tmp,"upload/".$file_name);
+        }
+
+
+
+
+
+
+
+
+?>
+
+<form action="data.php" method="post" enctype="multipart/form-data">
+    <input type="text" name="username">
+    <input type="file" name="img[]" multiple>
+    <input type="submit">
+</form>
 
 
 
