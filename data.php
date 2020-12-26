@@ -1,10 +1,10 @@
 <?php
-session_start();
+// session_start();
 
 
-if(!isset($_SESSION['user'])){
-    header("LOCATION: index.html");
-}
+// if(!isset($_SESSION['user'])){
+//     header("LOCATION: index.html");
+// }
 
 //  username from database
 // $username = "ahmed";
@@ -422,11 +422,28 @@ function ismohamed($name){
 
 
         if(isset($_POST['username'])){
-            echo "<pre>";
-            print_r($_FILES);
-            // $tmp = $_FILES['img']['tmp_name'];
-            // $file_name = $_FILES['img']['name'];
-            // move_uploaded_file($tmp,"upload/".$file_name);
+            // echo "<pre>";
+            // print_r($_FILES);
+            // foreach($_FILES['img'] as $key => $value){
+
+            //     $name = '';
+            //     $tmp_name = '';
+            //     if($key == 'name'){
+            //         $name = $value;    
+            //     }
+            //     if($key == 'tmp_name'){
+            //         $tmp_name = $value;
+            //     }
+            //     move_uploaded_file($tmp_name,"upload/".$name);                
+            // }
+
+            $image = $_FILES['img'];
+            $name = $image['name'];
+
+            $count = count($name);
+            for($i=0;$i<$count;$i++){
+               move_uploaded_file($_FILES['img']['tmp_name'][$i],"upload/".$_FILES['img']['name'][$i]);    
+            }
         }
 
 
@@ -438,7 +455,7 @@ function ismohamed($name){
 
 ?>
 
-<form action="data.php" method="post" enctype="multipart/form-data">
+<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
     <input type="text" name="username">
     <input type="file" name="img[]" multiple>
     <input type="submit">
